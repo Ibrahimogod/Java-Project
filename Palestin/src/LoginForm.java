@@ -109,7 +109,7 @@ public class LoginForm extends javax.swing.JFrame {
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
 
         // TODO add your handling code here:
-        try{
+   
             String username = this.txtUsername.getText();
             if(username.equals(this.username)){
                 String password = new String(txtPassword.getPassword());
@@ -127,15 +127,13 @@ public class LoginForm extends javax.swing.JFrame {
                         form.setVisible(true);
                     }
                 }else{
-                    throw new Exception();
+                    lblError.setVisible(true);
                 }
             }
             else{
-                throw new Exception();
+                    lblError.setVisible(true);
             }
-        }catch(Exception ex){
-            lblError.setVisible(true);
-        }
+        
         
     }//GEN-LAST:event_btnLoginActionPerformed
 
